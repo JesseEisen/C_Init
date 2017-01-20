@@ -6,6 +6,7 @@ CFLAGS = -O3 -Wall -g
 
 SRC = init.c
 
+OBJS = $(SRC:.c=.o)
 
 all: c_init
 
@@ -16,9 +17,11 @@ uninstall:
 	rm -f $(PREFIX)/bin/c_init
 
 
-c_init: $(SRC)
-	$(CC) $(CFLAGS) $^ -o $@
+c_init: $(OBJS)
+	$(CC)  $^ -o $@
 
+%.o: %.c
+	$(CC) $< $(CFLAGS) -c -o $@
 
 clean: 
 	rm -rf c_init *.o
