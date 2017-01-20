@@ -139,7 +139,7 @@ void WriteList(raw item){
 	}else{
 
 		split(item.defVal);
-		sprintf(s,"\"%s\": [\n", item.name,item.defVal);
+		sprintf(s,"\"%s\": [\n", item.name);
 		fwrite(s,strlen(s),1,fp);
 		for(i = 0; i < g_listlen; i++){
 				if(i == g_listlen-1) {

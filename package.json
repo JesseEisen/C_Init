@@ -1,0 +1,14 @@
+{
+"name": "init",
+"version": "1.0.0",
+"description": "this is a init project",
+"scripts": {
+ 	"test": "test command not specify"
+ },
+"keywords": [
+	"json",
+	"c"
+],
+"author": "Jesse Chen",
+"license": "MIT"
+}
